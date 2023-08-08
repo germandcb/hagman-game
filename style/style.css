@@ -1,0 +1,132 @@
+:root {
+    --fuentePrincipal: 'Roboto Mono', monospace;
+    
+    --AzulOscuro: #071952;
+    --VerdeOscuro: #0B666A;
+    --VerdeNormal: #35A29F;
+    --VerdeClaro: #97FEED;
+    --Blanco: #FFF;
+    --Negro: #000;
+    --grisClaro: #808080;
+    --Rojo: #ec0000;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--fuentePrincipal);
+}
+
+body {
+    background-color: var(--VerdeNormal);
+}
+
+.container {
+    font-size: 20px;
+    background-color: var(--Blanco);
+    width: 90vh;
+    max-width: 90rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 1.2rem 2.4rem rgba(1, 102, 72, 0.25);
+}
+
+#options-container {
+    text-align: center;
+}
+
+#options-container div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1.2rem 0 2.4rem 0 ;
+}
+
+#options-container button {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    background-color: var(--VerdeOscuro);
+    color: var(--Blanco);
+    border-radius: 0.5rem;
+    text-transform: capitalize;
+}
+
+#options-container button:disabled {
+    background-color: var(--grisClaro);
+    color: var(--Blanco);
+}
+
+#options-container button.active {
+    background-color: var(--AzulOscuro);
+    color: var(--Blanco);
+}
+
+.letter-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+#letter-container button {
+    height: 2.4rem;
+    width: 2.4rem;
+    border-radius: 0.3rem;
+    background-color: var(--Blanco);
+}
+
+.new-game-popup {
+    background-color: var(--Blanco);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+
+#user-input-section {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0.6rem 0 1.2rem 0;
+}
+
+#canvas {
+    display: block;
+    margin: auto;
+    border: 1px solid var(--AzulOscuro);
+}
+
+
+.hide {
+    display: none;
+}
+
+.win-msg {
+    color: var(--VerdeNormal);
+}
+
+.lose-msg {
+    color: var(--Rojo);
+}
+
+#new-game-button {
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    color: var(--Blanco);
+    background-color: var(--VerdeOscuro);
+}
